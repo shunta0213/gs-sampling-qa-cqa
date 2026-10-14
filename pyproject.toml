@@ -1,0 +1,45 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "gs-sampling-qa-cqa"
+version = "1.0.0"
+description = ""
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "ipykernel>=7.3.0",
+    "journalstyle",
+    "matplotlib>=3.11.1",
+    "networkx>=3.6.1",
+    "numpy>=2.5.2",
+    "pandas>=3.0.5",
+    "qutip>=5.3.1",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "pytest-cov>=7.1.0",
+]
+
+[tool.pytest.ini_options]
+addopts = "--cov=src --cov-report=html"
+testpaths = ["tests"]
+markers = [
+    "unit: isolated tests of individual functions, formulas, and API contracts",
+    "e2e: end-to-end numerical and physical-behaviour checks",
+]
+
+[tool.coverage.run]
+source = ["src"]
+
+[tool.coverage.report]
+show_missing = true
+
+[tool.uv.sources]
+journalstyle = { git = "https://github.com/shunta0213/journalstyle.git", rev = "09b897c816dd6751b617e166150a37e10b49f966" }

@@ -1,0 +1,22 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+.coverage
+htmlcov/
+
+# Simulation data and derived caches (regenerate with the scripts in algorithms/)
+data/
+cache/
+figs/
+visualize/figs/
+
+.DS_Store
+.ipynb_checkpoints/
