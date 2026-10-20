@@ -1,5 +1,7 @@
 # unfair-sampling-qa-cqa-gbp
 
+[![DOI](https://zenodo.org/badge/1418517796.svg)](https://doi.org/10.5281/zenodo.23491102)
+
 Code accompanying the paper *[Ground-State Sampling Correspondence between Penalty-Based and Constrained Quantum Annealing](https://arxiv.org/abs/2610.26687)* (Shunta Ide and Shu Tanaka, arXiv:2610.26687).
 
 It generates the simulation data of
